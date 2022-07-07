@@ -105,7 +105,7 @@ func TestListOperation(t *testing.T) {
 		t.Error(err)
 	}
 	defer file.Close()
-	
+
 	bytes, err := ioutil.ReadAll(file)
 	if err != nil {
 		t.Error(err)
@@ -152,7 +152,7 @@ func TestAddingOperationSameID(t *testing.T) {
 		t.Error(err)
 	}
 
-	existingItem := "[{\"id\":\"1\",\"email\":\"test@test.com\",\"age\":34}]"
+	existingItem := "[{\"id\":\"1\",\"email\":\"test@test.com\",\"age\":34},{\"id\":\"2\",\"email\":\"test2@test.com\",\"age\":31}]"
 
 	file.Write([]byte(existingItem))
 	file.Close()
